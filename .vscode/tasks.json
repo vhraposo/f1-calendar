@@ -1,0 +1,51 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Expo: start (dev server)",
+      "type": "shell",
+      "command": "npx expo start",
+      "problemMatcher": [],
+      "isBackground": true,
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    },
+    {
+      "label": "Expo: Android (dev build local)",
+      "type": "shell",
+      "command": "npx expo run:android",
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    },
+    {
+      "label": "Expo: iOS via EAS (dev build)",
+      "type": "shell",
+      "command": "npx eas-cli@latest build --profile development --platform ios",
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    },
+    {
+      "label": "Check: typecheck",
+      "type": "shell",
+      "command": "npm run typecheck",
+      "problemMatcher": ["$tsc"]
+    },
+    {
+      "label": "Check: lint",
+      "type": "shell",
+      "command": "npm run lint",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check: tests",
+      "type": "shell",
+      "command": "npm test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check: all (typecheck + lint + tests)",
+      "dependsOrder": "sequence",
+      "dependsOn": ["Check: typecheck", "Check: lint", "Check: tests"],
+      "problemMatcher": []
+    }
+  ]
+}
