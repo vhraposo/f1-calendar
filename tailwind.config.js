@@ -1,0 +1,53 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ['./src/**/*.{ts,tsx}'],
+  presets: [require('nativewind/preset')],
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        background: '#050505',
+        surface: '#0E0E10',
+        surfaceElevated: '#16161A',
+        surfaceMuted: '#1E1E23',
+        textPrimary: '#F5F5F5',
+        textSecondary: '#A5A5AD',
+        textMuted: '#6B6B73',
+        accent: '#E10600',
+        accentStrong: '#FF2D20',
+        accentMuted: '#7A0B08',
+        success: '#22C55E',
+        warning: '#F59E0B',
+        danger: '#EF4444',
+        border: '#232329',
+        divider: '#1A1A1F',
+        overlay: 'rgba(5, 5, 5, 0.72)',
+      },
+      spacing: {
+        xs: '4px',
+        sm: '8px',
+        md: '12px',
+        lg: '16px',
+        xl: '24px',
+        '2xl': '32px',
+        '3xl': '48px',
+      },
+      borderRadius: {
+        sm: '8px',
+        md: '12px',
+        lg: '16px',
+        xl: '20px',
+        full: '9999px',
+      },
+      fontSize: {
+        caption: ['12px', { lineHeight: '16px' }],
+        body: ['15px', { lineHeight: '21px' }],
+        bodyStrong: ['15px', { lineHeight: '21px', fontWeight: '600' }],
+        title: ['18px', { lineHeight: '24px', fontWeight: '700' }],
+        headline: ['24px', { lineHeight: '30px', fontWeight: '800' }],
+        display: ['34px', { lineHeight: '40px', fontWeight: '800' }],
+      },
+    },
+  },
+  plugins: [],
+};
